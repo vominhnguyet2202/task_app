@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:task_app/screens/edit_task_screen.dart';
 
-import '../blocs/blocs_export.dart';
-import '../models/task_model.dart';
-import '../screens/card_screen.dart';
+import '../commons/blocs_export.dart';
+import '../entities/models/task_model.dart';
+
+
+import '../feature/screens/card_screen.dart';
+import '../feature/screens/edit_task_screen.dart';
 import 'popup_menu.dart';
 
 class TaskTitle extends StatelessWidget {
