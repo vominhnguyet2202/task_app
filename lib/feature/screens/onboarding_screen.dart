@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:task_app/services/app_theme.dart';
 
+import '../../services/sizeconfig.dart';
 import '../../widgets/onboard.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -29,6 +29,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       body: SafeArea(
           child: Padding(
@@ -62,8 +63,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         )),
                 const Spacer(),
                 SizedBox(
-                  height: 55,
-                  width: 55,
+                  height: getsizeHeight(55),
+                  width: getsizeWidth(55),
                   child: ElevatedButton(
                       onPressed: () {
                         _pageController.nextPage(
@@ -101,7 +102,7 @@ class DoIndicator extends StatelessWidget {
       height: isActive ? 12 : 6,
       width: 8,
       decoration: const BoxDecoration(
-          color: Colors.blueAccent,
+          color: Colors.cyanAccent,
           borderRadius: BorderRadius.all(Radius.circular(12))),
     );
   }
@@ -116,6 +117,7 @@ class Onboard {
   });
 }
 
+// ignore: non_constant_identifier_names
 final List<Onboard> demo_data = [
   Onboard(
       image: "assets/images/onboa2.png",

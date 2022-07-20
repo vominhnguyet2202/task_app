@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:task_app/services/sizeconfig.dart';
 
 import '../../commons/blocs_export.dart';
 
@@ -11,14 +11,15 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return SafeArea(
       child: Drawer(
           child: Column(
         children: [
           Container(
             width: double.infinity,
-            padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 14.0),
+            padding: EdgeInsets.symmetric(
+                horizontal: getsizeWidth(20), vertical: getsizeHeight(14)),
             color: Colors.grey,
             child: Text(
               "Task Drawer",

@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppStyle {
-  static Color bgColor = Color(0xFFE2E2FF);
-  static Color mainColor = Color(0xFF00633);
-  static Color accentColor = Color(0xFF0065FF);
+  static Color bgColor = const Color(0xFFE2E2FF);
+  static Color mainColor = const Color(0xFF000633);
+  static Color accentColor = const Color(0xFF0065FF);
 
   static List<Color> cardColor = [
     Colors.white,

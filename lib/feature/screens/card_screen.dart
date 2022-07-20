@@ -20,6 +20,7 @@ class TaskCardScreen extends StatefulWidget {
 }
 
 class _TaskCardScreenState extends State<TaskCardScreen> {
+  // ignore: non_constant_identifier_names
   int color_id = Random().nextInt(AppStyle.cardColor.length);
   String date =
       DateFormat().add_yMMMMd().add_Hms().format(DateTime.now()).toString();

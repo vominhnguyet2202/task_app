@@ -1,7 +1,6 @@
 // ignore: depend_on_referenced_packages
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 import '../../../entities/models/task_model.dart';
 import '../../../commons/blocs_export.dart';
