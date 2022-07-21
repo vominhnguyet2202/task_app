@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/services/sizeconfig.dart';
 
+import '../../services/setting/sizeconfig.dart';
 import '../screens/login/login_screen.dart';
 
 class OnboardingPage extends StatelessWidget {

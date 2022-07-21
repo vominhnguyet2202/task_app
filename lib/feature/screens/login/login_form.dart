@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/feature/screens/login/commons/grandient_button_login.dart';
+import 'package:task_app/commons/grandient_button.dart';
+import 'package:task_app/feature/screens/regester/regester_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -62,7 +63,12 @@ class _LoginFormState extends State<LoginForm> {
                 style: TextStyle(color: Colors.white),
               ),
               icon: const Icon(Icons.arrow_forward),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RegisterScreen()));
+              },
             )
           ],
         ),

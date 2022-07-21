@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/feature/widgets/cuver_widget.dart';
 
-
 import 'regester_form.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -28,8 +27,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                Color(0xfff2cbd0),
-                Color(0xfff4ced9),
+                Color(0xffFFFFE0),
+                Color(0xffEE82EE),
               ])),
           child: SingleChildScrollView(
             child: Stack(children: <Widget>[

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:task_app/feature/screens/onboarding_screen.dart';
 
-import 'package:task_app/services/app_router.dart';
-import 'package:task_app/services/app_theme.dart';
 
 import 'commons/blocs_export.dart';
+import 'services/setting/app_router.dart';
+import 'services/setting/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

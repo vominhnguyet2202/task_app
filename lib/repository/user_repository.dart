@@ -1,10 +1,13 @@
+import 'dart:html';
+
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class UserRepository {
-  final FirebaseAuth _firebaseAuth;
+  final auth.FirebaseAuth _firebaseAuth;
 
-  UserRepository({required FirebaseAuth firebaseAuth})
+  UserRepository({auth.FirebaseAuth? firebaseAuth})
       : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
 
   Future<void> signInWithCredentials(String email, String password) {

@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../entities/models/task_model.dart';
-import '../../services/app_style.dart';
+
+import '../../services/setting/app_style.dart';
 
 
 class TaskCardScreen extends StatefulWidget {

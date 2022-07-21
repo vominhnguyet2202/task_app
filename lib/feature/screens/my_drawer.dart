@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/services/sizeconfig.dart';
 
 import '../../commons/blocs_export.dart';
 
+import '../../services/setting/sizeconfig.dart';
 import 'recycle_bin.dart';
 import 'tab_screens/tab_screen.dart';
 

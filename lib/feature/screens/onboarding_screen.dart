@@ -1,9 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import '../../services/sizeconfig.dart';
+import '../../services/setting/sizeconfig.dart';
 import '../widgets/onboard.dart';
-
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -33,58 +32,70 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     SizeConfig.init(context);
     return Scaffold(
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                  itemCount: demo_data.length,
-                  controller: _pageController,
-                  onPageChanged: (index) {
-                    setState(() {
-                      _pageIndex = index;
-                    });
-                  },
-                  itemBuilder: (context, index) => OnboardingPage(
-                        image: demo_data[index].image,
-                        title: demo_data[index].title,
-                        description: demo_data[index].description,
-                      )),
-            ),
-            Row(
-              children: [
-                ...List.generate(
-                    demo_data.length,
-                    (index) => Padding(
-                          padding: const EdgeInsets.only(right: 4),
-                          child: DoIndicator(
-                            isActive: index == _pageIndex,
-                          ),
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                Color(0xffFFFFE0),
+                Color(0xffEE82EE),
+              ])),
+          padding: const EdgeInsets.all(16.0),
+          //     child: Padding(
+          // padding: const EdgeInsets.all(16.0),
+
+          child: Column(
+            children: [
+              Expanded(
+                child: PageView.builder(
+                    itemCount: demo_data.length,
+                    controller: _pageController,
+                    onPageChanged: (index) {
+                      setState(() {
+                        _pageIndex = index;
+                      });
+                    },
+                    itemBuilder: (context, index) => OnboardingPage(
+                          image: demo_data[index].image,
+                          title: demo_data[index].title,
+                          description: demo_data[index].description,
                         )),
-                const Spacer(),
-                SizedBox(
-                  height: getsizeHeight(55),
-                  width: getsizeWidth(55),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        _pageController.nextPage(
-                            duration: const Duration(milliseconds: 300),
-                            curve: Curves.ease);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
-                      ),
-                      child: const Icon(
-                        Icons.navigate_next_sharp,
-                        color: Colors.white,
-                      )),
-                ),
-              ],
-            )
-          ],
+              ),
+              Row(
+                children: [
+                  ...List.generate(
+                      demo_data.length,
+                      (index) => Padding(
+                            padding: const EdgeInsets.only(right: 4),
+                            child: DoIndicator(
+                              isActive: index == _pageIndex,
+                            ),
+                          )),
+                  const Spacer(),
+                  SizedBox(
+                    height: getsizeHeight(55),
+                    width: getsizeWidth(55),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          _pageController.nextPage(
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.ease);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                        ),
+                        child: const Icon(
+                          Icons.navigate_next_sharp,
+                          color: Colors.white,
+                        )),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }

@@ -6,3 +6,9 @@ abstract class AuthenEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class AuthenStart extends AuthenEvent{}
+class AuthenLogin extends AuthenEvent{}
+
+class AuthenLogOut extends AuthenEvent{}
+
