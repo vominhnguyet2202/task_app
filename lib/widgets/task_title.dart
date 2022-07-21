@@ -5,8 +5,8 @@ import '../commons/blocs_export.dart';
 import '../entities/models/task_model.dart';
 
 
-import '../feature/screens/card_screen.dart';
-import '../feature/screens/edit_task_screen.dart';
+import '../feature/screens/task_screens/card_screen.dart';
+import '../feature/screens/task_screens/edit_task_screen.dart';
 import 'popup_menu.dart';
 
 class TaskTitle extends StatelessWidget {

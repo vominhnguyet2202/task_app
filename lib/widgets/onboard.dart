@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/services/sizeconfig.dart';
+import 'package:task_app/feature/screens/tab_screens/tab_screen.dart';
 
 import '../feature/screens/login_screen.dart';
+import '../services/setting/sizeconfig.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({
@@ -49,9 +50,8 @@ class OnboardingPage extends StatelessWidget {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: <Color>[
-                        Color(0xFF99FFCC),
-                        Color(0xFF33CCCC),
-                        Color(0xFF0099FF),
+                        Color(0xffd1eded),
+                        Color(0xff9deded),
                       ],
                     ),
                   ),
@@ -60,16 +60,17 @@ class OnboardingPage extends StatelessWidget {
               TextButton(
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.all(16.0),
-                  primary: Colors.white,
+                  primary: Colors.blueGrey,
+                  minimumSize: const Size(280, 40),
                   textStyle: TextStyle(fontSize: getsizeWidth(20)),
                 ),
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
+                          builder: (context) => const TabScreen()));
                 },
-                child: const Text('Go to Login'),
+                child: const Text('Start'),
               ),
             ],
           ),

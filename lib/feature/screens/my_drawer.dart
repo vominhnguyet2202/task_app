@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/services/sizeconfig.dart';
+import 'package:task_app/services/setting/sizeconfig.dart';
+
 
 import '../../commons/blocs_export.dart';
 
-import 'recycle_bin.dart';
-import 'tab_screen.dart';
+import 'task_screens/recycle_bin.dart';
+import 'tab_screens/tab_screen.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

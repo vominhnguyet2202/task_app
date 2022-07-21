@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-import '../feature/screens/recycle_bin.dart';
-import '../feature/screens/tab_screen.dart';
-
+import '../../feature/screens/tab_screens/tab_screen.dart';
+import '../../feature/screens/task_screens/recycle_bin.dart';
 class AppRouter {
   MaterialPageRoute? onGenerateRouter(RouteSettings settings) {
     switch (settings.name) {

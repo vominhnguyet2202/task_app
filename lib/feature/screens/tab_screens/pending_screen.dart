@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../commons/blocs_export.dart';
-import '../../entities/models/task_model.dart';
-import '../../widgets/task_list.dart';
+import '../../../commons/blocs_export.dart';
+import '../../../entities/models/task_model.dart';
+import '../../../widgets/task_list.dart';
 
 // ignore: must_be_immutable
 class PendingScreen extends StatelessWidget {
