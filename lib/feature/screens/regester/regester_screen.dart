@@ -27,8 +27,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                Color(0xffFFFFE0),
-                Color(0xffEE82EE),
+                Color(0xfff7d7d7),
+                Color(0xfff4be8b),
               ])),
           child: SingleChildScrollView(
             child: Stack(children: <Widget>[

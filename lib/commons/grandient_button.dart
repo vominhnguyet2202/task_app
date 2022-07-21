@@ -27,9 +27,9 @@ class GrandientButton extends StatelessWidget {
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
           colors: <Color>[
-            Color(0xFF99FFCC),
-            Color(0xFF33CCCC),
-            Color(0xFF0099FF),
+            Color(0xfff7dbc0),
+            Color(0xffbcf4d7),
+            // Color(0xffc0f7f9),
           ],
         ),
       ),

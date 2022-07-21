@@ -38,8 +38,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                Color(0xffFFFFE0),
-                Color(0xffEE82EE),
+                Color(0xfff7d7d7),
+                Color(0xfff4be8b),
               ])),
           padding: const EdgeInsets.all(16.0),
           //     child: Padding(

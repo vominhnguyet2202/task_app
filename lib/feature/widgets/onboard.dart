@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../services/setting/sizeconfig.dart';
 import '../screens/login/login_screen.dart';
+import '../screens/tab_screens/pending_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({
@@ -49,9 +50,8 @@ class OnboardingPage extends StatelessWidget {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: <Color>[
-                        Color(0xFF99FFCC),
-                        Color(0xFF33CCCC),
-                        Color(0xFF0099FF),
+                        Color(0xfff7dbc0),
+                        Color(0xff8ff7f7),
                       ],
                     ),
                   ),

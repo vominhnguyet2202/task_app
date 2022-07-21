@@ -29,7 +29,9 @@ class _RegisterFormState extends State<RegisterForm> {
             TextFormField(
               controller: _emailController,
               decoration: const InputDecoration(
-                  icon: Icon(Icons.email), labelText: "Email"),
+                icon: Icon(Icons.email),
+                labelText: "Email",
+              ),
               keyboardType: TextInputType.emailAddress,
               autovalidateMode: AutovalidateMode.always,
             ),
