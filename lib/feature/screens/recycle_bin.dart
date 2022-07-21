@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../commons/blocs_export.dart';
 
-import '../../widgets/task_list.dart';
+import '../widgets/task_list.dart';
 import 'my_drawer.dart';
 
 class RecycleBin extends StatelessWidget {

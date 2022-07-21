@@ -26,6 +26,9 @@ dependencies:
   intl: ^0.17.0
   google_fonts: ^3.0.1
   firebase_core: ^1.19.2
+  firebase_auth: ^3.4.2
+  flutterfire_ui: ^0.4.2+3
+  flow_builder: ^0.0.9
   # path_provider_android: ^2.0.16
   # freezed: ^2.0.3+1
   # flutter_quill: ^5.0.3 viet text, dua hinh nhu note

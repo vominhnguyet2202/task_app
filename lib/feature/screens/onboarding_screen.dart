@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 
 import '../../services/sizeconfig.dart';
-import '../../widgets/onboard.dart';
+import '../widgets/onboard.dart';
+
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

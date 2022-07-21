@@ -4,7 +4,8 @@ import 'package:task_app/services/sizeconfig.dart';
 import '../../commons/blocs_export.dart';
 
 import 'recycle_bin.dart';
-import 'tab_screen.dart';
+import 'tab_screens/tab_screen.dart';
+
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

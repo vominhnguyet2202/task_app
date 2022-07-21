@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-import '../../commons/blocs_export.dart';
-import '../../entities/models/task_model.dart';
+import '../../../commons/blocs_export.dart';
+import '../../../entities/models/task_model.dart';
 
 
 class EditTaskScreen extends StatelessWidget {

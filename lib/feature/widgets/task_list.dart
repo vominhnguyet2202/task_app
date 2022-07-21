@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/widgets/task_title.dart';
+import 'package:task_app/feature/widgets/task_title.dart';
 
-import '../entities/models/task_model.dart';
+import '../../entities/models/task_model.dart';
 
 
 class TaskList extends StatelessWidget {

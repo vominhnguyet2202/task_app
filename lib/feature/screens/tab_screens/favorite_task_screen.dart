@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../commons/blocs_export.dart';
-import '../../entities/models/task_model.dart';
-import '../../widgets/task_list.dart';
+import 'package:task_app/feature/widgets/task_list.dart';
+import '../../../commons/blocs_export.dart';
+import '../../../entities/models/task_model.dart';
+
 
 // ignore: must_be_immutable
 class FavoriteScreen extends StatelessWidget {
