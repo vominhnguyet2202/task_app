@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/feature/screens/regester/regester_screen.dart';
+import 'package:task_app/feature/screens/tab_screens/tab_screen.dart';
 
 import '../../../commons/grandient_button.dart';
 
@@ -55,7 +56,7 @@ class _RegisterFormState extends State<RegisterForm> {
               icon: const Icon(Icons.check),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => RegisterScreen()));
+                    MaterialPageRoute(builder: (context) => TabScreen()));
               },
             ),
             const SizedBox(
