@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:task_app/feature/screens/login/login_screen.dart';
 
+import '../../commons/blocs_export.dart';
 import '../../services/setting/sizeconfig.dart';
 import '../widgets/onboard.dart';
 
@@ -31,72 +33,78 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                Color(0xfff7d7d7),
-                Color(0xfff4be8b),
-              ])),
-          padding: const EdgeInsets.all(16.0),
-          //     child: Padding(
-          // padding: const EdgeInsets.all(16.0),
-
-          child: Column(
-            children: [
-              Expanded(
-                child: PageView.builder(
-                    itemCount: demo_data.length,
-                    controller: _pageController,
-                    onPageChanged: (index) {
-                      setState(() {
-                        _pageIndex = index;
-                      });
-                    },
-                    itemBuilder: (context, index) => OnboardingPage(
-                          image: demo_data[index].image,
-                          title: demo_data[index].title,
-                          description: demo_data[index].description,
-                        )),
-              ),
-              Row(
-                children: [
-                  ...List.generate(
-                      demo_data.length,
-                      (index) => Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: DoIndicator(
-                              isActive: index == _pageIndex,
-                            ),
-                          )),
-                  const Spacer(),
-                  SizedBox(
-                    height: getsizeHeight(55),
-                    width: getsizeWidth(55),
-                    child: ElevatedButton(
-                        onPressed: () {
-                          _pageController.nextPage(
-                              duration: const Duration(milliseconds: 300),
-                              curve: Curves.ease);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: const CircleBorder(),
+      body: BlocBuilder<AuthBloc, AuthState>(
+        builder: (context, state) {
+          if (state is UnAuthenticateState){return OnboardingScreen();}else if(state is AuthenticateState){return LoginPage();}
+          return SafeArea(
+              child: Container(
+                decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                      Color(0xfff7d7d7),
+                      Color(0xfff4be8b),
+                    ])),
+                padding: const EdgeInsets.all(16.0),
+                //     child: Padding(
+                // padding: const EdgeInsets.all(16.0),
+      
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: PageView.builder(
+                          itemCount: demo_data.length,
+                          controller: _pageController,
+                          onPageChanged: (index) {
+                            setState(() {
+                              _pageIndex = index;
+                            });
+                          },
+                          itemBuilder: (context, index) => OnboardingPage(
+                                image: demo_data[index].image,
+                                title: demo_data[index].title,
+                                description: demo_data[index].description,
+                              )),
+                    ),
+                    Row(
+                      children: [
+                        ...List.generate(
+                            demo_data.length,
+                            (index) => Padding(
+                                  padding: const EdgeInsets.only(right: 4),
+                                  child: DoIndicator(
+                                    isActive: index == _pageIndex,
+                                  ),
+                                )),
+                        const Spacer(),
+                        SizedBox(
+                          height: getsizeHeight(55),
+                          width: getsizeWidth(55),
+                          child: ElevatedButton(
+                              onPressed: () {
+                                _pageController.nextPage(
+                                    duration: const Duration(milliseconds: 300),
+                                    curve: Curves.ease);
+                              },
+                              style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                              ),
+                              child: const Icon(
+                                Icons.navigate_next_sharp,
+                                color: Colors.white,
+                              )),
                         ),
-                        child: const Icon(
-                          Icons.navigate_next_sharp,
-                          color: Colors.white,
-                        )),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+                      ],
+                    )
+                  ],
+                ),
+              ),
+      
+          );
+        },
+      )
+      );
   }
 }
 

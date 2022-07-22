@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/feature/screens/regester/regester_screen.dart';
 import 'package:task_app/feature/screens/tab_screens/tab_screen.dart';
 
 import '../../../commons/grandient_button.dart';
+import '../../../repository/user_repository.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -55,8 +55,10 @@ class _RegisterFormState extends State<RegisterForm> {
               ),
               icon: const Icon(Icons.check),
               onPressed: () {
+                UserRepository()
+                    .signUp(_emailController.text, _passwordController.text);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TabScreen()));
+                    MaterialPageRoute(builder: (context) => const TabScreen()));
               },
             ),
             const SizedBox(

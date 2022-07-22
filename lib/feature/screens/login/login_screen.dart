@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_app/app/blocs/bloc/login_with_email_bloc.dart';
 
+import '../../../commons/blocs_export.dart';
 import '../../widgets/cuver_widget.dart';
 import 'login_form.dart';
 
@@ -26,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-               Color(0xfff7d7d7),
+                Color(0xfff7d7d7),
                 Color(0xfff4be8b),
               ])),
           child: SingleChildScrollView(

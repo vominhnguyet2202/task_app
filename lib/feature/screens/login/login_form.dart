@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_app/app/blocs/bloc/login_with_email_bloc.dart';
 import 'package:task_app/commons/grandient_button.dart';
 import 'package:task_app/feature/screens/regester/regester_screen.dart';
+import 'package:task_app/feature/screens/tab_screens/tab_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -50,7 +53,13 @@ class _LoginFormState extends State<LoginForm> {
                 style: TextStyle(color: Colors.white),
               ),
               icon: const Icon(Icons.check),
-              onPressed: () {},
+              onPressed: () {
+                context.read<LoginWithEmailBloc>().add(SignInButtonPressed(
+                    email: _emailController.text,
+                    password: _passwordController.text));
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (_) => const TabScreen()));
+              },
             ),
             const SizedBox(
               height: 10,

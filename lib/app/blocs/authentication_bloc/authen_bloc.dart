@@ -26,7 +26,7 @@ class AuthenBloc extends Bloc<AuthenEvent, AuthenState> {
     final isSignIn = await _userRepository.isSignIn();
     if (isSignIn) {
       final User = await _userRepository.getUser();
-      yield AutheSuccess(User);
+      yield AutheSuccess(User!);
     } else {
       yield AthenFailure();
     }

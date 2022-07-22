@@ -12,7 +12,7 @@ class AuthenInitial extends AuthenState {}
 class AutheSuccess extends AuthenState {
   final User firebaseUser;
 
-  AutheSuccess(this.firebaseUser);
+  const AutheSuccess(this.firebaseUser);
   @override
   List<Object> get props => [firebaseUser];
 }
