@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/feature/screens/tab_screens/tab_screen.dart';
 
-import '../feature/screens/login_screen.dart';
 import '../services/setting/sizeconfig.dart';
 
 class OnboardingPage extends StatelessWidget {
